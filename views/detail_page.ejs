@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="<%= assetPath('style.css') %>">
+
+    <title>Book Details</title>
+</head>
+
+<body>
+
+    <!-- including header -->
+    <%- include('_header'); %>
+
+    <div id="book_detail">
+        <h1>Here is the book detail</h1>
+
+        <h1 class="title-color"> <%= title %></h1>
+
+        <!-- check if the specific detail is available, if not indicate - detail is not available -->
+
+        <% if (authors){ %> 
+            <h2 class="author-color"> <%= authors %></h2>
+        <% } else { %>
+            <h2 class="author-color">Book author is not available</h2>
+        <% } %>
+
+        <% if (thumbnail != 'no'){ %> 
+            <img src=<%= thumbnail %> alt="book image">
+        <% } else { %>
+            <h2>Book image is not available</h2>
+        <% } %>
+
+        <% if (description != 'undefined'){ %> 
+            <h2 class="description-color"> <%= description %> </h2>
+        <% } else { %>
+            <h2 class="description-color" style="text-align: center;">Book description is not available</h2>
+        <% } %>
+        
+        <!-- link to google books of particular book -->
+        <a href=<%= more %> >
+            <button id="sign-out-button"> More on Google Books
+            </button>
+        </a>  
+        &emsp;
+        
+        <!-- link to go back to search books -->
+        <a href="/users/searchPage" >
+            <button id="sign-out-button"> 
+                Go Back
+            </button>
+        </a>  
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="<%= assetPath('script.js') %>"></script>
+
+</body>
+</html>

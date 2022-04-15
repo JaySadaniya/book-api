@@ -1,0 +1,18 @@
+
+<!-- setting header of the page -->
+<div id="header">
+
+    <!-- check if user is logged in  -->
+    <% if (locals.user) { %>
+
+        <!-- display sign-out button and user name -->
+
+        <a href="/users/sign-out">
+            <button id="sign-out-button"> Sign-Out </button>
+        </a>
+
+        <h1><%= user.name %></h1>
+        
+    <% } %>
+    
+</div>

@@ -1,0 +1,31 @@
+{
+  "name": "coding-challenge",
+  "version": "1.0.0",
+  "description": "Technical Coding Challenge of book search api",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod_start": "SET NODE_ENV=production && node server.js"
+  },
+  "author": "Jay Sadaniya",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "crypto": "^1.0.1",
+    "del": "^6.0.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-rev": "^9.0.0",
+    "gulp-uglify-es": "^3.0.0",
+    "mongoose": "^6.2.10",
+    "morgan": "^1.10.0",
+    "passport": "^0.5.2",
+    "passport-google-oauth": "^2.0.0",
+    "rotating-file-stream": "^3.0.3"
+  }
+}
