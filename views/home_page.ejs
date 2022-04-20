@@ -3,11 +3,6 @@
 <head>
     <link rel="stylesheet" type="text/css" href="<%= assetPath('style.css') %>">
 
-    <script type="text/javascript">
-        let bodyTag = document.getElementsByTagName('body');
-        bodyTag.addEventListener('popstate',()=>{location.reload()});
-    </script>
-
     <title>User Sign-In</title>    
 </head>
 
@@ -23,6 +18,11 @@
             <button id="sign-out-button"> Sign-In With Google </button>
         </a>
     </p>
+
+    <script type="text/javascript">
+        let bodyTag = document.getElementsByTagName('body');
+        bodyTag.addEventListener('popstate',()=>{location.reload()});
+    </script>
 
 </body>
 </html>
