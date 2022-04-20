@@ -1,7 +1,9 @@
+const passport = require("passport");
 
 
 $("#search_form").submit(function (e) {
     e.preventDefault();
+    passport.checkAuthentication;
 
     // get the value of text submitted
     let searchText = $('input').val();
