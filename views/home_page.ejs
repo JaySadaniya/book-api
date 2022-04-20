@@ -3,7 +3,10 @@
 <head>
     <link rel="stylesheet" type="text/css" href="<%= assetPath('style.css') %>">
 
-    <%- script %>
+    <script type="text/javascript">
+        let bodyTag = document.getElementsByTagName('body');
+        bodyTag.addEventListener('popstate',()=>{location.reload()});
+    </script>
 
     <title>User Sign-In</title>    
 </head>
