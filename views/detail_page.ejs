@@ -5,10 +5,17 @@
 
     <link rel="stylesheet" type="text/css" href="<%= assetPath('style.css') %>">
 
+    <script type="text/javascript">    
+        window.history.forward();
+        function noBack() { 
+             window.location.reload(); 
+        }
+    </script>
+
     <title>Book Details</title>
 </head>
 
-<body>
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
 
     <!-- including header -->
     <%- include('_header'); %>
@@ -53,11 +60,6 @@
         </a>
 
     </div>
-
-    <script type="text/javascript">
-        let bodyTag = document.getElementsByTagName('body')[0];
-        bodyTag.addEventListener('popstate',()=>{window.location = window.location});
-    </script>
 
 </body>
 </html>
