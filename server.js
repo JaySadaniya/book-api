@@ -40,6 +40,7 @@ app.use(passport.setAuthenticatedUser);
 app.use("/", express.static(env.assets_path));
 app.use("/users", express.static(env.assets_path));
 app.use("/users/bookdetail", express.static(env.assets_path));
+app.set('layout extractScripts', true);
 
 app.get('/', usersController.home);
 
