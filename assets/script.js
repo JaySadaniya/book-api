@@ -1,4 +1,4 @@
-const passport = require("passport");
+import passport from '../config/passport-google-oauth-strategy';
 
 
 $("#search_form").submit(function (e) {
