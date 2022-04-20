@@ -20,7 +20,7 @@ $("#search_form").submit(function (e) {
 
         // get search data using google api
         $.get(`https://www.googleapis.com/books/v1/volumes?q=${searchText}&maxResults=40`, function (data) {
-            if (!data){
+            if (!data.items){
                 $('<h1 class="title-color">Books are not found</h1>');
             }
             else{
