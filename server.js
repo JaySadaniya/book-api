@@ -37,12 +37,13 @@ app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
 
 app.use(require('express-ejs-layouts'));
-app.set('layout extractScripts', true);
 
 // Tell app to use assets upon different request
 app.use("/", express.static(env.assets_path));
 app.use("/users", express.static(env.assets_path));
 app.use("/users/bookdetail", express.static(env.assets_path));
+
+app.set('layout extractScripts', true);
 
 app.get('/', usersController.home);
 
