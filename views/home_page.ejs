@@ -3,17 +3,17 @@
 <head>
     <link rel="stylesheet" type="text/css" href="<%= assetPath('style.css') %>">
 
-    <SCRIPT type="text/javascript">    
+    <script type="text/javascript">    
         window.history.forward();
         function noBack() { 
              window.history.forward(); 
         }
-   </SCRIPT>
+   </script>
 
     <title>User Sign-In</title>    
 </head>
 
-<body style="text-align: center;">
+<body style="text-align: center;" onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
 
     <!-- including header -->
     <%- include('_header'); %>
