@@ -38,8 +38,6 @@ app.use(passport.setAuthenticatedUser);
 
 // Tell app to use assets upon different request
 app.use("/", express.static(env.assets_path));
-
-// app.use("/assets", express.static(env.assets_path));
 app.use("/users", express.static(env.assets_path));
 app.use("/users/bookdetail", express.static(env.assets_path));
 
