@@ -15,11 +15,7 @@
     <title>User Sign-In</title>    
 </head>
 
-<body style="text-align: center;">
-
-    <% if (!locals.user) { %>
-        <div onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload=""></div>
-    <% } %>
+<body style="text-align: center;" onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
 
     <!-- including header -->
     <%- include('_header'); %>

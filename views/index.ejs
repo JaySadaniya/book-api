@@ -14,11 +14,7 @@
 
     <title>Search Books Application</title>
 </head>
-<body>
-
-    <% if (!locals.user) { %>
-        <div onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload=""></div>
-    <% } %>
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
     
     <%- include('_header'); %>
 
