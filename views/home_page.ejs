@@ -4,7 +4,6 @@
     <link rel="stylesheet" type="text/css" href="<%= assetPath('style.css') %>">
 
     <script type="text/javascript">    
-        window.history.forward();
         function noBack() { 
              window.location.reload(); 
         }
@@ -13,7 +12,7 @@
     <title>User Sign-In</title>    
 </head>
 
-<body style="text-align: center;" onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+<body style="text-align: center;" onpageshow="if (event.persisted) noBack();" onunload="">
 
     <!-- including header -->
     <%- include('_header'); %>
