@@ -3,19 +3,16 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="<%= assetPath('style.css') %>">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 
-    <script type="text/javascript">    
-        window.location.reload();
-        function noBack() { 
-             window.location.reload(); 
-        }
-    </script>
+    <link rel="stylesheet" type="text/css" href="<%= assetPath('style.css') %>">
 
     <title>Book Details</title>
 </head>
 
-<body onpopstate="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+<body>
 
     <!-- including header -->
     <%- include('_header'); %>
