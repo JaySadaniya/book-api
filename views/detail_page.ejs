@@ -14,7 +14,7 @@
     <title>Book Details</title>
 </head>
 
-<body onpageshow="if (event.persisted) noBack();" onunload="">
+<body onpopstate="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
 
     <!-- including header -->
     <%- include('_header'); %>

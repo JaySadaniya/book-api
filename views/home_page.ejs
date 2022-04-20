@@ -12,7 +12,7 @@
     <title>User Sign-In</title>    
 </head>
 
-<body style="text-align: center;" onpageshow="if (event.persisted) noBack();" onunload="">
+<body style="text-align: center;" onpopstate="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
 
     <!-- including header -->
     <%- include('_header'); %>

@@ -13,7 +13,7 @@
 
     <title>Search Books Application</title>
 </head>
-<body onpageshow="if (event.persisted) noBack();" onunload="">
+<body onpopstate="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
     
     <%- include('_header'); %>
 
